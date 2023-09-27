@@ -1,0 +1,24 @@
+{
+  "name": "nextgen-secured-webapp-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nextgen-secured-webapp-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": [
+        "{workspaceRoot}/dist/.playwright/apps/nextgen-secured-webapp-e2e"
+      ],
+      "options": {
+        "config": "apps/nextgen-secured-webapp-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nextgen-secured-webapp-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "implicitDependencies": ["nextgen-secured-webapp"]
+}
