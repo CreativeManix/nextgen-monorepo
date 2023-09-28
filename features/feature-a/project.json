@@ -1,0 +1,24 @@
+{
+  "name": "feature-a",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "features/feature-a/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["features/feature-a/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/features/feature-a"
+      }
+    }
+  }
+}

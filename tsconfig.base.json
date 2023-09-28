@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nextgen-monorepo/feature-a": ["features/feature-a/src/index.ts"],
+      "@nextgen-monorepo/feature-b": ["features/feature-b/src/index.ts"],
+      "@nextgen-monorepo/shared-ui": ["libs/ui/src/index.ts"],
+      "@nextgen-monorepo/test-api-client": [
+        "api-clients/test-api-client/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
