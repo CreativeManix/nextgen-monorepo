@@ -41,7 +41,7 @@ Targets can be defined in the `package.json` or `projects.json`. Learn more [in 
 ## API client gen
 
 ```
- nswag openapi2tsclient /input:http://localhost:5121/swagger/v1/swagger.json /template:Axios /output:/home/max/projects/SiteBox/web/sitebox-webapp/src/services/CoreApiClient.ts
+ nswag openapi2tsclient /input:http://localhost:5121/swagger/v1/swagger.json /template:Axios /output:/src/services/CoreApiClient.ts
  npx openapi-typescript-codegen --input http://localhost:5121/swagger/v1/swagger.json --output ./src/apiClient --client axios --name coreApiClient
 
 ```
