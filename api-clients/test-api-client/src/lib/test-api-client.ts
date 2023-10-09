@@ -1,7 +1,7 @@
 export function testApiClient(): string {
   return 'test-api-client response';
 }
-type Product = {
+export type Product = {
   id: number;
   title: string;
   description: string;
